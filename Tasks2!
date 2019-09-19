@@ -1,0 +1,30 @@
+Name = str(input("Введите свое имя:"))
+print("Привет " + Name)
+
+while True:
+    try:
+        Age = int(input("Введите свой год рождения: "))
+    except ValueError:
+        print("Вы ввели некоректные данные")
+        continue
+    else:
+        break
+
+if len(str(Age)) != 4:
+    print("Вы ввели не 4 цыфры")
+elif Age <= 1920:
+    print("Вы ввели не верный год.")
+elif Age > 2019:
+    print("Этот год еще не настал")
+else:
+        print('Круто!')
+
+year = 2019 - int(Age)
+print("Вам уже :" + str(year))
+if year < 18:
+    print("Вы еще несовершеннолетний. Вам отказано в посещении клуба.")
+elif year > 100:
+    print("Кажется, Вас обыскались на кладбище")
+else:
+    print("Вы совершеннолетний, можете войти в клуб.")
+    
