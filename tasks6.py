@@ -37,7 +37,7 @@ def log(func):
 
         result = func(*args, **kwargs)
         logger.info("Result %s" % result)
-        return func
+        return result
     return wrap_log
 
 
@@ -50,4 +50,5 @@ def my_random(a):
 
 
 if __name__ == "__main__":
-    value = my_random(12) # a = 12
+    value = my_random(12)   # a = 12
+    print(value)
