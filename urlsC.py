@@ -7,8 +7,12 @@ with open("urls.txt", 'r') as file:
     urls = {}
     for line in file:
         newline = line[:-2]
-        k, *v = newline.split('://')
+        k, *v = newline.split("://")
         urls[k] = v
-
         print(urls)
-
+        for key in list(urls.keys()):
+            if key != 1:
+                del urls[key]
+            elif urls == " ":
+                del urls
+                print(urls)
